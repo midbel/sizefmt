@@ -70,7 +70,7 @@ func Format(n float64, meth string) string {
 
 func formatSize(n float64, sizes []float64) []byte {
 	if n < sizes[0] {
-		return appendFloat(n, 0)
+		return trimZeros(appendFloat(n, 0))
 	}
 	var (
 		div  float64
